@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview",
-    "predeploy": "npm run build",        // <--- Thêm dòng này
-    "deploy": "gh-pages -d dist"         // <--- Thêm dòng này
+    "preview": "vite preview"
   },
   "dependencies": {
     "docx": "^9.7.1",
