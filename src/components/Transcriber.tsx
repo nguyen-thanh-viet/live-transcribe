@@ -24,7 +24,7 @@ export const Transcriber: React.FC<TranscriberProps> = ({ apiKey, model, onSaveH
 
   const audioRecorderRef = useRef<AudioRecorder | null>(null);
   const geminiClientRef = useRef<GeminiLiveClient | null>(null);
-  const transcriptAreaRef = useRef<HTMLElement>(null);
+  const transcriptAreaRef = useRef<any>(null);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -286,7 +286,7 @@ export const Transcriber: React.FC<TranscriberProps> = ({ apiKey, model, onSaveH
       ) : (
         <textarea
           className="transcript-area"
-          ref={transcriptAreaRef as React.RefObject<HTMLTextAreaElement>}
+          ref={transcriptAreaRef}
           value={transcript}
           onChange={(e) => setTranscript(e.target.value)}
           placeholder="Văn bản gốc sẽ hiển thị ở đây. Bạn có thể nhấp vào đây để chỉnh sửa..."

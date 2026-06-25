@@ -68,7 +68,7 @@ export class AudioRecorder {
     }
   }
 
-  private arrayBufferToBase64(buffer: ArrayBuffer) {
+  private arrayBufferToBase64(buffer: ArrayBufferLike) {
     let binary = '';
     const bytes = new Uint8Array(buffer);
     const len = bytes.byteLength;
